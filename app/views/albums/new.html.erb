@@ -1,0 +1,11 @@
+<h2>New album </h2>
+<span class="validate_cls"> * Mendatory field </span>
+<%= nested_form_for(@album, :url => user_albums_path(@user), :html => {:multipart => true}) do |f| %>
+  Title:<span class="validate_cls"> * </span> <%= f.text_field :title, :class => "validate[required, minSize[2], maxSize[30]]", :placeholder => 'Enter album title.' %> <br />
+  Description: <span class="validate_cls"> * </span> <%= f.text_area :description, :size => "35*35", :class => "validate[required, minSize[10], maxSize[100]]", :placeholder => 'Enter album description.' %> <br />
+  <%= f.fields_for :photos do |photo| %>
+    <%= render "photo_fields", :f => photo %>
+  <% end %>
+  <%= f.link_to_add "Add a photo", :photos %>  <br />
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,4 @@
+<%= photo.file_field :avatar %>
+<%= photo.text_field :name %>
+<%= photo.link_to_remove "Remove this photo" %>
+

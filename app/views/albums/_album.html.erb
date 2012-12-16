@@ -1,0 +1,5 @@
+<b> Title: </b> <%= album.title %> <br />
+<b> Description:  </b> <%= album.description %> <br />
+<b> Photos: </b><%= album.photos.length unless album.photos.blank? %> <br />
+<hr />
+<%= render(:partial => "photo", :collection => album.photos) || "There's no photos to be displayed." %>
