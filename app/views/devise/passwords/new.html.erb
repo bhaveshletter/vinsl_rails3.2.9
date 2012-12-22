@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <%= f.email_field :email, :class => 'validate[required, custom[email]]' %></div>
 
   <div><%= f.submit "Send me reset password instructions" %></div>
 <% end %>
