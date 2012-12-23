@@ -2,7 +2,7 @@ Vinsol329::Application.routes.draw do
   
   devise_for :users, :skip => [:confirmations, :unlocks] 
   resources :users, :except => [:index, :show, :new, :create, :edit, :update, :destroy] do
-    resources :albums, :only => [:new, :index, :create]
+    resources :albums, :only => [:new, :index, :create, :destroy]
   end  
 
   root :to => 'home#index'

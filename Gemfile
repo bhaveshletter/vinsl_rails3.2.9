@@ -9,8 +9,10 @@ gem 'mysql2'
 gem 'libv8', '~> 3.11.8'
 gem 'therubyracer', "~> 0.11.0"
 gem 'devise'
-gem "paperclip", "~> 3.0"
+gem "paperclip", '~> 3.0'
 gem "nested_form"
+gem 'will_paginate', '~> 3.0'
+gem 'thin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

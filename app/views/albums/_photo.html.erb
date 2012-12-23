@@ -1,4 +1,9 @@
-<%= link_to image_tag(photo.avatar(:thumb)), photo.avatar.url, :target => '_blank' %> <br />
-<b> Tag: </b> <%= photo.tag %>
-<hr />
+<tr>
+  <td>
+  	<%= link_to image_tag(photo.avatar(:thumb)), photo.avatar.url, :target => '_blank' %>
+  </td>	
+  <td>
+    <%= photo.tag %>
+  </td>  
+</tr>
 

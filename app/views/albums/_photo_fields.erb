@@ -1,4 +1,4 @@
 <br />
-Photo: <span class="validate_cls"> * </span> <%= f.file_field :avatar, :onchange => "return photo_fun(this);" %> <%= f.link_to_remove "Remove this photo" %>
+Photo: <span class="validate_cls"> * </span> <%= f.file_field :avatar, :class => "validate[required]", :onchange => "return photo_fun(this);" %> <%= f.link_to_remove "Remove this photo" %>
 <br />
 Tags: <span class="validate_cls"> * </span> <%= f.text_field :tag, :class => "validate[required, minSize[2], maxSize[50]]", :placeholder => 'Enter photo tag.' %>

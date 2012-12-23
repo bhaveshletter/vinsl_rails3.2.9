@@ -1,1 +1,2 @@
-<%= render(:partial => "album", :collection => @albums) || "There's no album to be displayed." %>    
+<%= render(:partial => "album", :collection => @albums) || "There's no album to be displayed." %>
+<%= will_paginate @albums %>
