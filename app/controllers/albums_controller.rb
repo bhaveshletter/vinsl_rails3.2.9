@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   before_filter :get_user
   
   def index 
-    @albums = @user.albums.paginate(:page => params[:page], :per_page => 2)
+    @albums = @user.albums.includes(:photos).paginate(:page => params[:page], :per_page => 2)
   end
 
   def new
